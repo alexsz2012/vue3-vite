@@ -1,9 +1,8 @@
 import type { App } from 'vue';
+import { setupPermissionDirective } from './permission';
+import { setupRoleDirective } from './role';
 
-export function setupPermissionDirectives(app: App) { 
-  app.directive("auth", {
-    mounted(el, binding, vnode) { 
-
-    }
-  });
+export function setupGloabDirectives(app: App) { 
+  setupPermissionDirective(app);
+  setupRoleDirective(app);
 }

@@ -2,8 +2,10 @@ import { PropType, h, Transition, reactive, watchEffect, defineComponent } from 
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue';
 import { MenuDataItem } from '../utils/typings.ts';
 import Icon from '/@/components/Icon/index.vue';
-import { Layout, Menu, Space } from 'ant-design-vue'
-import { router } from '/@/routes'
+import { Layout, Menu, Space } from 'ant-design-vue';
+import { router } from '../../router/index.ts';
+import './index.less';
+
 export default defineComponent({
   name: 'BaseMenu',
   props: {
