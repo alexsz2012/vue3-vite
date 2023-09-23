@@ -57,8 +57,7 @@
 
    ```sh
    pnpm dev
-   访问路径
-   http://localhost:3010/
+   #访问路径 http://localhost:3010/
    ```
 
 4. 生产打包
