@@ -1,7 +1,8 @@
-#vue3-vite admin 系统
+# vue3-vite admin 系统
+
 技术栈为 `Vue3` + `Vite` + `typescirpt` + `ant-design-vue` + `Pinia`, 顺滑的开发体验。
 
-##项目目录
+## 项目目录
 
 ```js
 |———config                          // 配置文件目录
