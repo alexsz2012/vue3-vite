@@ -96,38 +96,8 @@ export const usePermissioStore = defineStore({
         ];
       }
       return routes;
-    },
-
-    // /**
-    //  * @name buildRoutesAction
-    //  * @description: 获取路由
-    //  */
-    // buildRoutesAction(): RouteRecordRaw[] {
-    //   // this.isGetUserInfo = true;
-    //   this.setIsGetUserInfo(true);
-
-    //   // 404 路由一定要放在 权限路由后面
-    //   let routes: RouteRecordRaw[] = [...constantRoutes, ...accessRoutes, ...publicRoutes];
-
-    //   // 1. 角色权限过滤：0-银行 1-银保监
-    //   let filterRoutes = filterRouteByRole(cloneDeep(accessRoutes), this.role);
-    //   // let filterRoutes = routes;
-
-    //   // 2. 菜单权限过滤：
-    //   // 管理员直接跳过
-    //   if (this.getIsAdmin === 0) {
-    //     const filterRoutesByAuth = filterAsyncRoutes(cloneDeep(filterRoutes), this.modules);
-    //     filterRoutes = filterRoutesByAuth;
-    //   }
-
-    //   // 普通用户
-    //   // 1. 方案一：过滤每个路由模块涉及的接口权限，判断是否展示该路由
-    //   // 2. 方案二：直接检索接口权限列表是否包含该路由模块，不做细分，axios同一拦截
-    //   routes = [...constantRoutes, ...filterRoutes, ...publicRoutes];
-
-    //   return routes;
-    // },
-  },
+    }
+  }
 });
 
 // Need to be used outside the setup

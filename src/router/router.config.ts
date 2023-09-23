@@ -1,6 +1,6 @@
 import type { RouteRecordRaw } from 'vue-router';
-import BasicLayout from '/@/layouts/index.vue';
-import BlankLayout from '/@/layouts/BlankLayout.vue';
+import BasicLayout from '/@/layout/index.vue';
+import BlankLayout from '/@/layout/BlankLayout.vue';
 export const accessRoutes: RouteRecordRaw[] = [
   {
     path: '/app',

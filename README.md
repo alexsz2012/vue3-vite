@@ -1,18 +1,76 @@
-# Vue 3 + TypeScript + Vite
+#vue3-vite admin 系统
+技术栈为 `Vue3` + `Vite` + `typescirpt` + `ant-design-vue` + `Pinia`, 顺滑的开发体验。
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+##项目目录
 
-## Recommended IDE Setup
+```js
+|———config                          // 配置文件目录
+|
+|———mock                            // mock目录
+|———src                             //
+    ├── api                         // 接口相关
+    ├── assets                      // 公共的文件（如image、css、font等）
+    ├── components                  // 项目组件
+    ├── directives                  // 自定义 指令
+    ├── enums                       // 自定义 常量（枚举写法）
+    ├── hooks                       // 自定义 hooks
+    ├── layout                      // 全局布局
+    ├── router                      // 路由
+    ├── store                       // 状态管理器
+    ├── utils                       // 工具库
+    ├── views                       // 页面模块目录
+        ├── login                   // login页面模块
+        ├── ...
+    ├── App.vue                     // vue顶层文件
+    ├── auto-imports.d.ts           // unplugin-auto-import 插件生成
+    ├── components.d.d.ts           // unplugin-vue-components 插件生成
+    ├── main.ts                     // 项目入口文件
+    ├── shimes-vue.d.ts             // vite默认ts类型文件
+    ├── types                       // 项目type类型定义文件夹
+|———.npmrc                          // npm 配置
+|———.package.json                   // package 包
+|———shims.vue.d.ts                  // 配置 vue，
+|———tsconfig.json                   // typescript 配置文件
+|———jsconfig.node.json              // typescript node环境配置
+|———vite.config.ts                  //  vite 配置
+|———windi.config.ts                 //  windicss 配置
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```
 
-## Type Support For `.vue` Imports in TS
+## 运行/打包
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+1. 克隆项目
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+   `git@gitee.com:alexandertao/vite-vue3-ts.git`
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+2. 安装依赖
+
+   ```sh
+   #推荐使用pnpm
+   pnpm install
+   #没有安装pnpm 先安装
+   npm install -g pnpm
+   ```
+
+3. 启动项目
+
+   ```sh
+   pnpm dev
+   访问路径
+   http://localhost:3010/
+   ```
+
+4. 生产打包
+
+   ```sh
+   #检查TS 类型然后构建
+   pnpm build:check
+   #直接打包
+   pnpm build
+   ```
+
+## 效果图
+
+![vue3-vite](https://cdn.jsdelivr.net/gh/alexsz2012/CDN@1.1/images/vue3-vite-admin-home.png)
+
+## 欢迎 star

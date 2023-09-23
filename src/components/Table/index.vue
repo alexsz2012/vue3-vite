@@ -66,7 +66,7 @@
   import { usePermission } from '/@/hooks/usePermission';
   import { useRole } from '/@/hooks/useRole';
   import { TablePaginationConfig } from 'ant-design-vue/lib/table/interface';
-
+  import './index.less';
   // const req = () => new Promise((resolve) => resolve({ total: 0, list: [] }));
 
   export default defineComponent({

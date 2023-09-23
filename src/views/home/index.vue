@@ -7,7 +7,6 @@
       <VisitSource class="md:w-1/3 !md:mx-4 !md:my-0 !my-4 w-full" :loading="loading" />
       <SalesProductPie class="md:w-1/3 w-full" :loading="loading" />
     </div>
-    <VitePluginTest/>
   </div>
 </template>
 <script lang="ts" setup>
@@ -18,7 +17,6 @@
   import VisitSource from './components/VisitSource.vue';
   import VisitRadar from './components/VisitRadar.vue';
   import SalesProductPie from './components/SalesProductPie.vue';
-  import VitePluginTest from './components/VitePluginTest.vue';
   setTimeout(() => {
     loading.value = false;
   }, 1500)

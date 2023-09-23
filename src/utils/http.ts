@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { API_PREFIX } from '../../config/constant';
-import { ResData } from '../api/global.d.ts';
+import { ResData } from '../api/global';
 import { getToken } from './auth';
 import { useUserStoreWithOut } from '../store/modules/user';
 import { useMessage } from '../hooks/useMessage.tsx';

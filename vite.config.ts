@@ -43,12 +43,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       }
     },
     build: {
-      sourcemap: true,
-      // sourcemapExcludeSources: [
-      //   /^@babel/, // exclude @babel/runtime and related packages
-      // ],
-      // target: 'es2015',
-      minify: 'terser',
+      target: 'es2015',
+      // minify: 'terser',
       terserOptions: {
         compress: {
           keep_infinity: true,
