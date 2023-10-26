@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 import { store } from '/@/store';
 import fetchApi from '/@/api/user';
 import { RouteRecordRaw } from 'vue-router';
-import constantRoutes, { accessRoutes, publicRoutes } from '/@/router/router.config';
+import fullRoutes, { accessRoutes, publicRoutes } from '/@/router/router.config';
 import { filterAsyncRoutes } from '/@/utils/permission';
 
 interface PermissioState {
@@ -83,14 +83,13 @@ export const usePermissioStore = defineStore({
      */
     async buildRoutesAction(): Promise<RouteRecordRaw[]> {
       // 404 路由一定要放在 权限路由后面
-      let routes: RouteRecordRaw[] = [...constantRoutes, ...accessRoutes, ...publicRoutes];
+      let routes: RouteRecordRaw[] = [...fullRoutes];
 
       if (this.getIsAdmin !== 1) {
         // 普通用户
         // 1. 方案一：过滤每个路由模块涉及的接口权限，判断是否展示该路由
         // 2. 方案二：直接检索接口权限列表是否包含该路由模块，不做细分，axios同一拦截
         routes = [
-          ...constantRoutes,
           ...filterAsyncRoutes(accessRoutes, this.modules),
           ...publicRoutes
         ];

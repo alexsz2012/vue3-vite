@@ -26,7 +26,7 @@ export function createVitePlugins(isBuild: boolean) {
   // vite-plugin-svg-icons
   vitePlugins.push(configSvgIconsPlugin(isBuild));
   // rollup-plugin-visualizer
-  // vitePlugins.push(configVisualizerConfig());
+  vitePlugins.push(configVisualizerConfig());
   //  vite-plugin-style-import
   vitePlugins.push(configStyleImportPlugin(isBuild));
   vitePlugins.push(WindiCSS() as unknown as Plugin);

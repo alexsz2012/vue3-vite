@@ -6,7 +6,7 @@ export function configCompressPlugin(): Plugin {
   if (COMPRESSION) {
     return compressPlugin({
       ext: '.gz',
-      deleteOriginFile: false,
+      deleteOriginFile: true,
     }) as Plugin;
   }
   return null;

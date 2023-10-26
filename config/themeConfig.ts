@@ -8,5 +8,6 @@ export function generateModifyVars(dark = false) {
     // hack: `${modifyVars.hack} @import (reference) "${resolve('src/design/config.less')}";`,
     'primary-color': '#3860F4',
     'link-color': '#3860F4',
+    dark
   };
 }

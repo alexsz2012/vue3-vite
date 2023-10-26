@@ -1,4 +1,4 @@
-import { ReqAccount, ResAccount } from './mode';
+import { ReqAccount, ResAccount } from './model';
 import { get, post } from '/@/utils/http';
 
 enum URL {

@@ -42,7 +42,12 @@
 
 1. 克隆项目
 
-   `git@gitee.com:alexandertao/vite-vue3-ts.git`
+   ```sh
+   #github
+   git@github.com:alexsz2012/vue3-vite.git
+   #gitee
+   git@gitee.com:alexandertao/vite-vue3-ts.git
+   ```
 
 2. 安装依赖
 

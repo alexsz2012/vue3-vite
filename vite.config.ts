@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import { UserConfig, ConfigEnv } from 'vite';
 import proxy from './config/vite/proxy';
 import { VITE_PORT, VITE_DROP_CONSOLE } from './config/constant';
-import { generateModifyVars } from './config/themeConfig';
+import { generateModifyVars } from './config/themeConfig.ts';
 import { createVitePlugins } from './config/vite/plugin';
 import { configManualChunk } from './config/vite/optimizer';
 
@@ -11,7 +11,7 @@ function pathResolve(dir: string) {
 }
 
 // https://vitejs.dev/config/
-export default ({ command, mode }: ConfigEnv): UserConfig => {
+export default ({ command }: ConfigEnv): UserConfig => {
   const isBuild = command === 'build';
   return {
     plugins: createVitePlugins(isBuild),

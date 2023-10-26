@@ -9,16 +9,16 @@
     </a-breadcrumb>
     <h2 class="font18 marT13 rowSC link" @click="handleBreadcrumb">
       <LeftOutlined />
-      <span class="marL10">{{ title }}</span>
+      <!-- <span class="marL10">{{ title }}</span> -->
     </h2>
   </a-card>
 </template>
 <script setup lang="ts">
   import { LeftOutlined } from '@ant-design/icons-vue';
   import { Route } from 'ant-design-vue/es/breadcrumb/Breadcrumb';
-  import { useBreadcrumbTitle } from '/@/hooks/useBreadcrumbTitle';
+  // import { useBreadcrumbTitle } from '/@/hooks/useBreadcrumbTitle';
 
-  const { title } = useBreadcrumbTitle();
+  // const { title } = useBreadcrumbTitle();
   const router = useRouter();
 
   const emits = defineEmits(['handleClick']);
